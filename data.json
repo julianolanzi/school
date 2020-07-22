@@ -1,14 +1,3 @@
 {
-  "teachers": [
-    {
-      "id": 1,
-      "avatar_url": "https://app.rocketseat.com.br/node/fase-03-1",
-      "name": "Juliano",
-      "birth": 736300800000,
-      "schooling": "Tecnologic",
-      "modo": "presential",
-      "subjects": "HTML5,CSS3,JAVASCRIPT",
-      "created_at": 1594911357842
-    }
-  ]
+  "teachers": [ ]
 }

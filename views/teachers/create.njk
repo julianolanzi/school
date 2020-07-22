@@ -9,16 +9,16 @@
 
             <div class="item">
                 <div>Avatar</div>
-                    <div>
-                        <input type="text" name="avatar_url" placeholder="http://">
-                    </div>
+                <div>
+                    <input type="text" name="avatar_url" placeholder="http://">
+                </div>
             </div>
 
             <div class="item">
                 <div>Teacher</div>
-                    <div>
-                        <input type="text" name="name" placeholder="Name of Teacher">
-                    </div>
+                <div>
+                    <input type="text" name="name" placeholder="Name of Teacher">
+                </div>
             </div>
 
             <div class="item">
@@ -28,13 +28,20 @@
 
             <div class="item">
                 <div>schooling</div>
-                <div><input type="text" name="schooling" placeholder="enter you Schooling"></div>
+                <div>
+                    <select  class="custom-select" name="schooling">
+                        <option value="highschool" selected="selected">Complete high school</option>
+                        <option value="highereducation" >Complete Higher Education</option>
+                        <option value="master">Master</option>
+                        <option value="Doctorate">Doctorate degree</option>
+                    </select>
+                </div>
             </div>
 
             <div class="item">
                 <div>type of class</div>
                 <div>
-                    <span><input type="radio" name="modo" value="ead">EAD</span>
+                    <span><input type="radio" name="modo" value="Distance">Distance</span>
                     <span><input type="radio" name="modo" value="presential">presential</span>
                 </div>
             </div>

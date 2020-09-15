@@ -1,3 +1,48 @@
 {
-  "teachers": [ ]
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://scontent.fcgh18-1.fna.fbcdn.net/v/t1.0-9/89760355_3519006384792731_2059123444733181952_n.jpg?_nc_cat=101&_nc_sid=09cbfe&_nc_ohc=k85wButqM6AAX9om7b7&_nc_oc=AQlRBZ425MAwGTLPf6mvXjpoinhjFwVz8TCUzvQFFMb_7dnenrP0i7pCu4msorZpfVU&_nc_ht=scontent.fcgh18-1.fna&oh=f27fb7c1afbf926e3285e45e03148b58&oe=5F76A3E3",
+      "name": "Juliano Lanzi Lopes",
+      "birth": 736300800000,
+      "schooling": "highereducation",
+      "modo": "Presential",
+      "subjects": "HTML,CSS,JS,JAVA",
+      "gender": "M",
+      "created_at": 1599084307530
+    },
+    {
+      "id": "2",
+      "avatar_url": "https://scontent.fcgh18-1.fna.fbcdn.net/v/t1.0-9/71677053_2321019507996929_4482022403165126656_o.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_ohc=AnBC7_yw3R8AX9Qvbgh&_nc_oc=AQkJuRtzroKAy7aw5EI-OUdw6Wsct-wOee7ySeNn0VDNr-7jX4tARXCgIasmkP2ES40&_nc_ht=scontent.fcgh18-1.fna&oh=2649fae4050b480678c89739c8b045c4&oe=5F76406F",
+      "name": "Jefferson Teixeira",
+      "birth": 725673600000,
+      "schooling": "highschool",
+      "modo": "Distance",
+      "subjects": "HTML,CSS",
+      "gender": "M",
+      "created_at": 1599084354442
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://scontent.fcgh18-1.fna.fbcdn.net/v/t1.0-9/45795013_10210772164138798_936375498424975360_n.jpg?_nc_cat=101&_nc_sid=09cbfe&_nc_ohc=_qwPj5IWXsgAX9JYX-4&_nc_ht=scontent.fcgh18-1.fna&oh=4b15f09d4b2a6917b6da2d3bf24be699&oe=5F7446AA",
+      "name": "Stephanie Carvalho",
+      "birth": 639014400000,
+      "schooling": "highschool",
+      "modo": "Presential",
+      "subjects": "HELPDESK,ORIENTATION",
+      "gender": "F",
+      "created_at": 1599084468764
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://scontent.fcgh18-1.fna.fbcdn.net/v/t1.0-9/106453369_2955555524543038_6327379218864072355_o.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_ohc=qFuLG73zriIAX-7T0yk&_nc_ht=scontent.fcgh18-1.fna&oh=2d10e914ca886b63b83126dc9ae62c97&oe=5F76B679",
+      "name": "Carla Sant Anna",
+      "birth": -2579990400000,
+      "schooling": "master",
+      "modo": "Distance",
+      "subjects": "Suport,atendimento,P.O",
+      "gender": "F",
+      "created_at": 1599089572158
+    }
+  ]
 }

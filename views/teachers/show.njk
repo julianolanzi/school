@@ -1,0 +1,58 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div class="container">
+        <section class="avatar" style="background: url({{ teacher.avatar_url }}) no-repeat center center / cover "></section>
+        <section class="infos">
+            <h3>Datalhes</h3>
+
+            <div class="item">
+                <div>Teacher
+                </div>
+                <div>{{ teacher.name }}</div>
+            </div>
+
+            <div class="item">
+                <div>Yers old</div>
+                <div>{{ teacher.age }}</div>
+            </div>
+
+            <div class="item">
+                <div>schooling</div>
+
+                {% for schooling in teacher.schooling %}
+                    <div>{{ schooling }}</div>
+                {% endfor %}
+            </div>
+
+            <div class="item">
+                <div>type of class</div>
+                    <div>{{ "Distance" if teacher.modo == "Distance" else "Presential" }}</div>
+            </div>
+
+            <div class="item">
+                <div>gender</div>
+                    <div>{{ "Masculino" if teacher.gender == "M" else "Feminino" }}</div>
+            </div>
+
+            <div class="item">
+                <div>school subjects</div>
+                <div>
+                    {% for subject in teacher.subjects %}
+                    <span>{{ subject }}</span>
+                     {% endfor %}
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Since register
+                </div>
+                <div>{{ teacher.created_at }}</div>
+            </div>
+
+            <a href="/teachers/{{ teacher.id }}/edit" class="button">Editar</a>
+
+        </section>
+    </div>
+{% endblock content %}

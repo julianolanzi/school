@@ -2,49 +2,33 @@
 
 {% block content %}
 
-    <div class="container">
-        <section class="avatar" style="background: url(https://source.unsplash.com/collection/10356769/500x500) no-repeat center center / cover "></section>
-        <section class="infos">
-            <h3>Datalhes</h3>
+    <div class="container table-container">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Tecaher</th>
+                    <th>Schooling</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
 
-            <div class="item">
-                <div>Teacher
-                </div>
-                <div>Juliano Lanzi Lopes</div>
-            </div>
+                {% for teacher in teachers %}
 
-            <div class="item">
-                <div>Yers old</div>
-                <div>27 anos</div>
-            </div>
+                <tr>
+                    <td>
+                    <span style="background-image: url({{teacher.avatar_url}})"></span>
+                    {{ teacher.name }}</td>
 
-            <div class="item">
-                <div>schooling</div>
-                <div>Doutorado</div>
-            </div>
+                    <td>{{ teacher.schooling }}</td>
+                    
 
-            <div class="item">
-                <div>type of class</div>
-                <div>Presencial
-                </div>
-            </div>
+                    <td><a href="/teachers/{{teacher.id}}">ver</a></td>
 
-            <div class="item">
-                <div>school subjects
-                </div>
-                <div>
-                    <span>Matemática</span>
-                    <span>Física</span>
-                    <span>Química</span>
-                </div>
-            </div>
-
-            <div class="item">
-                <div>Since register
-                </div>
-                <div>02/07/2020</div>
-            </div>
-
-        </section>
+                </tr>
+            {% endfor %}
+                
+            </tbody>
+    </table>
     </div>
 {% endblock content %}

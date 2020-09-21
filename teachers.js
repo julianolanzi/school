@@ -3,6 +3,13 @@ const data = require('./data.json')
 const { age, date, graduation } = require('./utils')
 
 
+exports.index = function (req, res) {
+
+    
+    return res.render("teachers/index", {teachers: data.teachers})
+
+}
+
 // show
 exports.show = function (req, res) {
 
@@ -17,7 +24,7 @@ exports.show = function (req, res) {
         const teacher = {
             ...foundTeacher,
             age: age(foundTeacher.birth),
-            schooling: "",
+            schooling: graduation (foundTeacher.schooling),
             modo: foundTeacher.modo,
             subjects: foundTeacher.subjects.split(","),
             created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at),
@@ -102,7 +109,8 @@ exports.put = function (req, res) {
     const teacher = {
         ...foundTeacher,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        id: Number(req.body.id)
 
 
     }

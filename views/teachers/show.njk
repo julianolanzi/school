@@ -3,7 +3,7 @@
 {% block content %}
 
     <div class="container">
-        <section class="avatar" style="background: url({{ teacher.avatar_url }}) no-repeat center center / cover "></section>
+        <section class="avatar" title ="{{ teacher.name }}" style="background: url({{ teacher.avatar_url }}) no-repeat center center / cover "></section>
         <section class="infos">
             <h3>Datalhes</h3>
 
@@ -51,7 +51,7 @@
                 <div>{{ teacher.created_at }}</div>
             </div>
 
-            <a href="/teachers/{{ teacher.id }}/edit" class="button">Editar</a>
+            <a href="/teachers/{{ teacher.id }}/edit" class="button"><i class="fas fa-edit"></i> Editar</a>
 
         </section>
     </div>

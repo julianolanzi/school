@@ -1,0 +1,65 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div class="container">
+        <section class="avatar" title ="{{ student.name }}" style="background: url({{ student.avatar_url }}) no-repeat center center / cover "></section>
+        <section class="infos">
+            <h3>Details Student</h3>
+
+            <div class="item">
+                <div>Teacher
+                </div>
+                <div>{{ student.name }}</div>
+            </div>
+
+            <div class="item">
+                <div>Yers old</div>
+                <div>{{ student.birth }}</div>
+            </div>
+
+            <div class="item">
+                <div>E-mail</div>
+
+                
+                    <div>{{ student.email }}</div>
+                
+            </div>
+
+            <div class="item">
+                <div>type of class</div>
+                    <div>{{ "Distance" if student.modo == "Distance" else "Presential" }}</div>
+            </div>
+
+            <div class="item">
+                <div>gender</div>
+                    <div>{{ "Masculino" if student.gender == "M" else "Feminino" }}</div>
+            </div>
+
+            <div class="item">
+                <div>YEAR SCHOOL</div>
+
+                
+                    <div>{{ student.year }}</div>
+                
+            </div>
+
+            <div class="item">
+                <div>Hour/W</div>
+
+                
+                    <div>{{ student.hour }}</div>
+                
+            </div>
+
+            <div class="item">
+                <div>Since register
+                </div>
+                <div>{{ student.created_at }}</div>
+            </div>
+
+            <a href="/students/{{ student.id }}/edit" class="button"> <i class="fas fa-edit"></i> Editar</a>
+
+        </section>
+    </div>
+{% endblock content %}

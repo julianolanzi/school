@@ -189,6 +189,7 @@ a.button {
     margin-top: 32px;
     width: 100%;
     font-size: 16px;
+    cursor: pointer;
 }
 
 a.button {
@@ -277,7 +278,8 @@ tbody tr td:first-child span {
 
 }
 
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+.table-container > a{
     background-color: var(--primary-color);
     padding: 8px 16px;
     text-decoration: none;
@@ -285,10 +287,37 @@ tbody tr td:last-child a {
     color: white;
     font-size: 12px;
     border-radius: 4px;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.8s;
 }
+
+.table-container > a {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.8s;
+    
+}
+.table-container > a:hover,
+tbody tr td:last-child a:hover {
+    box-shadow: inset 100px 0 0 0 #FFF;
+    color: var(--primary-color);
+}
+
+
 
 .table-container thead tr th:last-child,
 td:last-child {
     text-align: center;
 
 }
+

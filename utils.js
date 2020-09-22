@@ -27,7 +27,14 @@ module.exports = {
 
         const day = `0${date.getUTCDate()}`.slice(-2)
 
-        return `${year}-${month}-${day}`
+        return {
+
+            day,
+            month,
+            year,
+            iso: `${year}-${month}-${day}`,
+            birthDay : `${day}/${month}`
+        }
 
     },
 
@@ -59,5 +66,42 @@ module.exports = {
 
     
     },
+
+    grade: function (year) {
+
+        let yearscho;
+
+        if(year == '5F'){
+
+            yearscho = "5° Fundamentally";
+        }
+        if(year == '6F'){
+
+            yearscho = "6° Fundamentally";
+        }
+        if(year == '7F'){
+
+            yearscho = "7° Fundamentally";
+        }
+        if(year == '8F'){
+
+            yearscho = "8° Fundamentally";
+        }
+        if(year == '1M'){
+
+            yearscho = "1° high school";
+        }
+        if(year == '2M'){
+
+            yearscho = "2° high school";
+        }
+        if(year == '3M'){
+
+            yearscho = "3° high school";
+        }
+
+        return (yearscho)
+        
+    }
 
 }

@@ -1,16 +1,25 @@
 const fs = require('fs')
-const data = require('./data.json')
-const { age, date, graduation } = require('./utils')
+const data = require('../data.json')
+const { age, date, graduation } = require('../utils')
 
 
 exports.index = function (req, res) {
 
-    
-    return res.render("teachers/index", {teachers: data.teachers})
+    const teachers = []
+
+    for (let teacher of data.teachers) {
+
+        teachers.push({
+            ...teacher,
+            schooling: graduation(teacher.schooling)
+        })
+    }
+
+    return res.render("teachers/index", { teachers })
 
 }
 
-// show
+//SHOW
 exports.show = function (req, res) {
 
     const { id } = req.params
@@ -32,8 +41,11 @@ exports.show = function (req, res) {
 
     return res.render("teachers/show", {teacher})
 }
-
-// create
+//CREATE
+exports.create = function(req, res) {
+    return res.render("teachers/create")
+}
+//POST
 exports.post = function (req, res) {
 
     const keys = Object.keys(req.body)
@@ -69,9 +81,7 @@ exports.post = function (req, res) {
         return res.redirect("/teachers")
     })
 }
-
-//edit
-
+//EDIT
 exports.edit = function(req, res){
 
     const { id } = req.params
@@ -84,15 +94,13 @@ exports.edit = function(req, res){
 
     const teacher = {
         ...foundTeacher,
-        birth: date(foundTeacher.birth),
+        birth: date(foundTeacher.birth).iso,
         schooling: graduation (foundTeacher.schooling),
     }
 
     return res.render('teachers/edit', {teacher})
 }
-
-
-// put
+// PUT
 exports.put = function (req, res) {
     const { id } = req.body
     let index = 0
@@ -123,9 +131,7 @@ exports.put = function (req, res) {
         return res.redirect(`/teachers/${id}`)
     })
 }
-
 //DELETE
-
 exports.delete = function (req, res){
 
     const {id} = req.body
